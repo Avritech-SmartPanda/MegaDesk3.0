@@ -1,0 +1,119 @@
+﻿@page
+@model MegaDeskv3._0.Pages.DeskQuotes.DetailsModel
+
+@{
+    ViewData["Title"] = "Quote Details";
+}
+
+<div class="my-12">
+    <h1 class="my-4 title rounded-md">Desk Quote @ViewData["Title"] </h1>
+    <div class="createpage rounded-md p-6">
+        <div class="grid  grid-cols-1  sm:grid-cols-2 gap-4">
+            <div class="flex w-full img-bg hidden rounded-xl  sm:block"> </div>
+            <div class="flex w-full">
+                <div class="flex w-full flex-col">
+                    <div class="border-2 border-dashed border-lime-900 p-6 rounded-md">
+                        <div class="py-4 my-2 h-16 flex flex-row justify-between border-b">
+                            <p class="text-2xl font-bold tracking-tight leading-none mb-2">@Html.DisplayFor(model =>
+                                model.DeskQuote.customerFirstName) @Html.DisplayFor(model =>
+                                model.DeskQuote.customerLastName)</p>
+
+                            <a asp-page="./Edit" asp-route-id="@Model.DeskQuote.Id"
+                                class="py-3 px-8 flex items-center justify-center text-base   font-medium text-white tracking-tight leading-none w-24 bg-lime-900 rounded-md hover:bg-lime-500  hover:text-white ">Edit</a>
+                        </div>
+
+                        <div class="grid  grid-cols-1  sm:grid-cols-2 gap-4">
+                            <div class="flex w-full py-2">
+                                <div class="flex flex-col">
+                                    <p class="font-bold mb-2 uppercase text-xs"> @Html.DisplayNameFor(model =>
+                                        model.DeskQuote.width)</p>
+                                    <p class="text-secondary"> @Html.DisplayFor(model => model.DeskQuote.width)</p>
+                                </div>
+                            </div>
+                            <div class="flex w-full py-2">
+                                <div class="flex flex-col">
+                                    <p class="font-bold mb-2 uppercase text-xs"> @Html.DisplayNameFor(model =>
+                                        model.DeskQuote.depth)</p>
+                                    <p class="text-secondary"> @Html.DisplayFor(model => model.DeskQuote.depth)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex w-full py-2">
+                                <div class="flex flex-col">
+                                    <p class="font-bold mb-2 uppercase text-xs"> @Html.DisplayNameFor(model =>
+                                        model.DeskQuote.drawers)</p>
+                                    <p class="text-secondary"> @Html.DisplayFor(model => model.DeskQuote.drawers)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex w-full py-2">
+                                <div class="flex flex-col">
+                                    <p class="font-bold mb-2 uppercase text-xs"> @Html.DisplayNameFor(model =>
+                                        model.DeskQuote.surfaceMaterial)</p>
+                                    <p class="text-secondary"> @Html.DisplayFor(model =>
+                                        model.DeskQuote.surfaceMaterial)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex w-full py-2">
+                                <div class="flex flex-col">
+                                    <p class="font-bold mb-2    uppercase text-xs"> @Html.DisplayNameFor(model =>
+                                        model.DeskQuote.rushDays) </p>
+                                    <p class="text-secondary">@Html.DisplayFor(model => model.DeskQuote.rushDays) </p>
+                                </div>
+                            </div>
+
+                            <div class="flex w-full py-2">
+                                <div class="flex flex-col">
+                                    <p class="font-bold mb-2    uppercase text-xs"> @Html.DisplayNameFor(model =>
+                                        model.DeskQuote.quoteDate)</p>
+                                    <p class="text-secondary">@Html.DisplayFor(model => model.DeskQuote.quoteDate)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex w-full py-2 border-t justify-end px-4">
+                            <p class="text-2xl font-bold uppercase text-lime-900"> @Html.DisplayNameFor(model =>
+                                model.DeskQuote.quoteTotal) : $@Html.DisplayFor(model => model.DeskQuote.quoteTotal)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="my-4  flex justify-end ">
+        <a asp-page="Index"  class=" w-40 bg-lime-900 rounded-md py-3 px-2 flex items-center justify-center text-base font-medium text-white hover:bg-lime-500 ">
+            Back to List
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
